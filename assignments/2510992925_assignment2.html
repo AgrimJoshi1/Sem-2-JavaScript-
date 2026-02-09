@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+</head>
+<body>
+    <script>
+//----------------------------------------------##exercise1 start##---------------------------------------------------------
+        const countries = ["India", "United States", "Germany", "Japan", "Canada", "Australia", "Brazil"];
+        console.log(`Length of array is ${countries.length}`)
+        console.log(`First element is ${countries[0]}, middle element is ${countries[3]} and last element is ${countries[6]}`)
+
+        const mixedarr=[42, "hello", true, "student", [1, 2, 3]];
+        console.log(`Length of mixed array is ${mixedarr.length}`)
+
+        let companies=["Facebook","Google","Microsoft","Apple","IBM","Oracle","Amazon"]
+        console.log(`The array is${companies}`)
+        console.log(`Number of comapanies in array are ${companies.length}`)
+        console.log(`First company is ${companies[0]}, middle company is ${companies[3]} and last company is ${companies[6]}`)
+
+        for (let a = 0; a < companies.length; a++) {
+            console.log(companies[a])
+        }
+        for (let i = 0; i < companies.length; i++) {
+            console.log(companies[i].toUpperCase());
+        }
+        console.log(`${companies.join(', ')} are big IT companies.`);
+
+        let searchCompany = "Google";
+
+        if (companies.includes(searchCompany)) {
+        console.log(searchCompany);
+        } 
+        else {
+        console.log("Company not found");
+        }
+
+        let q=[]
+        for(let w=0;w<companies.length;w++){
+            let e=0
+            for(let r=0;r<companies[w].length;r++){
+                if(companies[w][r].toLowerCase()==='o'){
+                    e++
+                }
+            }
+            if(e>1){
+                q.push(companies[w])
+            }
+        }
+        console.log(q)
+
+        companies.sort()
+        console.log(companies)
+
+        companies.reverse()
+        console.log(companies)
+
+        console.log(companies.slice(0,3))
+
+        console.log(companies.slice(companies.length-3))
+
+        let t=Math.floor(companies.length/2)
+        if(companies.length%2===0){
+            console.log(companies.slice(t-1,t+1))
+        }else{
+            console.log(companies.slice(t,t+1))
+        }
+
+        companies.shift()
+        console.log(companies)
+
+        t=Math.floor(companies.length/2)
+        if(companies.length%2===0){
+            companies.splice(t-1,2)
+        }else{
+            companies.splice(t,1)
+        }
+        console.log(companies)
+
+        companies.pop()
+        console.log(companies)
+
+        companies=[]
+        console.log(companies)
+//----------------------------------------------##exercise1 end##---------------------------------------------------------
+//----------------------------------------------##exercise2 start##---------------------------------------------------------
+
+
+        let text ='I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+        let words = text.replace(/[.,]/g, '').split(' ')
+        console.log(words)
+        console.log(words.length)
+        let shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey'];
+
+        if (!shoppingCart.includes('Meat')) {
+        shoppingCart.unshift('Meat');
+        }
+
+        if (!shoppingCart.includes('Sugar')) {
+        shoppingCart.push('Sugar');
+        }
+
+        shoppingCart = shoppingCart.filter(item => item !== 'Honey');
+
+        let teaIndex = shoppingCart.indexOf('Tea');
+        if (teaIndex !== -1) {
+        shoppingCart[teaIndex] = 'Green Tea';
+        }
+
+        console.log(shoppingCart);
+        let countryToCheck = 'Ethiopia';
+
+        if (countries.includes(countryToCheck)) {
+        console.log(countryToCheck.toUpperCase());
+        } 
+        else {
+        countries.push(countryToCheck);
+        }
+
+        let webTechs = ['HTML','CSS','JavaScript','React','Redux','Node','MongoDB'];
+
+        if (webTechs.includes('Sass')) {
+        console.log('Sass is a CSS preprocess');
+        } 
+        else {
+        webTechs.push('Sass');
+        console.log(webTechs);
+        }
+        const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+        const backEnd = ['Node','Express', 'MongoDB'];
+
+        const fullStack = frontEnd.concat(backEnd);
+        console.log(fullStack);
+//----------------------------------------------##exercise2 end##---------------------------------------------------------
+
+//----------------------------------------------##exercise3 start##---------------------------------------------------------
+                const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+        ages.sort((a, b) => a - b);
+        console.log(`${ages}`)
+        let s1 = 0;
+        for (let i = 0; i < ages.length; i++) {
+            if (i === ages.length / 2 - 1 || i === ages.length / 2) {
+                s1 += ages[i];
+         }
+    }
+        const med = s1 / 2;
+        console.log(med);
+        let s2 = 0;
+        for (let i = 0; i < ages.length; i++) {
+            s2 += ages[i];
+    }
+        console.log(s2);
+        const range = ages[ages.length - 1] - ages[0];
+        console.log(range);
+        
+        console.log(ages[0]);
+        
+        console.log(ages[ages.length - 1]);
+        
+        const average = s2 / ages.length;
+        console.log(average);
+
+        let minDiff = ages[0] - average;
+        if (minDiff < 0) minDiff = -minDiff;
+
+        let maxDiff = ages[ages.length - 1] - average;
+        if (maxDiff < 0) maxDiff = -maxDiff;
+
+        console.log(minDiff);
+        console.log(maxDiff);
+//----------------------------------------------##exercise3 end##---------------------------------------------------------
+
+    </script>
+
+</body>
+</html>
