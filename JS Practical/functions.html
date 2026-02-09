@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//square
+        function square(){
+            for(let i = 0;i<=10;i++){
+                console.log(i*i)
+            }
+        square()
+        }
+//sum
+        function sum(){
+            let num1 = prompt("Enter num1");
+            let num2 = prompt("Enter num2");
+            console.log(Number(num1) + Number(num2));
+        }
+        sum()
+//fullname
+        function printFullName(){
+        let firstName = prompt("Enter first name")
+        let lastName = prompt("Enter last name")
+        let space = ' '
+        let fullname = firstName + lastName
+        return fullname
+        } 
+    console.log(printFullName)       
+//function using parameter value
+        function areaOfCircle(r){
+
+        
+        let area = Math.PI*r*r
+        return area
+        }
+    conole.log(areaOfCircle(10))    
+    </script>    
+</body>
+</html>
