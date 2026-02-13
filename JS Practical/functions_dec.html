@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// arrow function
+        const sumall=(...args)=>{
+            let sum=0
+            for(const element of args){
+                sum+=element
+            }
+            return sum
+        }   
+        console.log(sumall(1,2,3,4))
+        console.log(sumall(10,20,30,40))
+        console.log(sumall(5,10,15,20,25))
+//anonymous function
+        const square1=function(n){
+            return n*n
+        }
+        console.log(square1(2))
+//self invoking fucntion
+        let sqfun=(function(n){
+            return n*n
+        })(10)
+        console.log(sqfun)
+//function
+        function generatefullname(Fname="Asabeneh",Lname="yetayeh"){
+            let space=" "
+            let fullname=Fname+space+Lname
+            return fullname
+        }
+        console.log(generatefullname())
+        console.log(generatefullname("david","smith "))
+        
+
+        function calcage(byear,cyear=2019){
+            let ag=cyear-byear
+            return age
+        }
+        console.log("age:",calcage(1819))
+        </script>
+</body>
+</html>
