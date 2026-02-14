@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+</head>
+<body>
+    <script>
+//-----------------------------------------##exercise1 start##-----------------------------------------------------------
+        let a = "";
+        
+        for (let i = 0; i <= 10; i++) {
+        console.log(`${i}x${i} = `,i*i);
+    }
+        
+        for (let i = 0; i<= 10; i++){
+            console.log(i,(i*i),(i*i*i));
+    }
+        
+        for(let i = 0;i <=100;i++){
+        console.log()
+    }
+        
+        sumeven=0;
+        sumodd=0;
+        for(let i=0;i<=100;i++){
+            if (i%2==0){
+                sumeven+=i;
+            }
+            else{
+                sumodd+=i;
+            }
+    }
+        console.log(`sum of even is ${sumeven}`);
+        console.log(`sum of odd is ${sumodd}`);
+        
+        let randomArray = []
+        for(let i = 0; i<5; i++){
+            randomArray.push(Math.floor(Math.random()*100));
+
+    }
+        console.log(randomArray);
+        
+        let uniqueNumbers = [];
+        while (uniqueNumbers.length<5){
+            let randomNum = Math.floor(MAth.random()*100)+1;
+        if(!uniqueNumbers.includes(randomNum)){
+            uniqueNumbers.push(radnomNum);
+        }
+    }
+    console.log(uniqueNumbers)
+    
+    const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    let id = "";
+    for(let i = 0; i<6;i++){
+        const randomIndex = Math.floor(Math.random()*characters.length);
+        id += characters[randomIndex];
+    }
+    console.log(id);
+//----------------------------------------------##exercise1 end##-----------------------------------------------------------
+//----------------------------------------------##exercise2 start##-----------------------------------------------------------
+    const char = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let ran_id = "";
+        for(let i = 0; i<Math.floor(Math.random() * 101);i++){
+            const randomIndex = Math.floor(Math.random()*char.length);
+            ran_id += char[randomIndex];
+        }
+    console.log(ran_id);
+
+    const hexChars = "0123456789abcdef";
+
+    let hex_id = "";
+    let length = 6;   
+
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * hexChars.length);
+        hex_id += hexChars[randomIndex];
+    }
+
+    console.log(hex_id);
+
+    function randomRGB() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    return `rgb(${r},${g},${b})`;
+}
+
+    console.log(randomRGB());
+
+    const countries = ['Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Iceland','Japan','Kenya'];
+    const upperCountries = countries.map(country => country.toUpperCase());
+    console.log(upperCountries);
+
+    const countriesLength = countries.map(country => country.length);
+    console.log(countriesLength);
+
+    const countryData = countries.map(country => [country,country.slice(0, 3).toUpperCase(),country.length]);
+    console.log(countryData);
+
+    const landCountries = countries.filter(country =>country.toLowerCase().includes('land'));
+    console.log(landCountries.length ? landCountries : "All these countries are without land");
+
+
+    const iaCountries = countries.filter(country =>country.toLowerCase().endsWith('ia'));
+    console.log(iaCountries.length ? iaCountries : "These are countries ends without ia");
+
+    const longestCountry = countries.reduce((longest, current) =>current.length > longest.length ? current : longest);
+    console.log(longestCountry);
+
+
+    const fiveCharCountries = countries.filter(country =>country.length === 5);
+    console.log(fiveCharCountries);
+//----------------------------------------------##exercise2 end##-----------------------------------------------------------
+//----------------------------------------------##exercise3 start##-----------------------------------------------------------
+    const countries2 = ['Albania','Bolivia','Canada','Denmark','Ethiopia','Finland','Germany','Hungary','Ireland','Iceland','Japan','Kenya','United States'];
+    const webTechs = ['HTML','CSS','JavaScript','React','Node','MongoDB'];
+    const mernStack = ['MongoDB','Express','React','Node'];
+
+    const countriesCopy = [...countries2];
+
+    const sortedCountries = [...countries2].sort();
+    console.log(sortedCountries);
+
+    const landCountries2 = countries2.filter(country =>country.toLowerCase().includes('land'));
+    console.log(landCountries2);
+
+    const longestCountry2 = countries2.reduce((longest, current) =>current.length > longest.length ? current : longest);
+    console.log(longestCountry2);
+
+    const fourCharCountries = countries2.filter(country =>country.length === 4);
+    console.log(fourCharCountries);
+
+    const multiWordCountries = countries2.filter(country =>country.trim().split(' ').length >= 2);
+    console.log(multiWordCountries);
+
+    const reversedCapitalized = [...countries2].reverse().map(country => country.toUpperCase());
+    console.log(reversedCapitalized);
+
+//----------------------------------------------##exercise end##-----------------------------------------------------------
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
