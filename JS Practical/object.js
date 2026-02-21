@@ -14,9 +14,6 @@ const person = {
     return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`
   }
 }
-
-
-
 const copyPerson = Object.assign({}, person)
 console.log(copyPerson)
 
