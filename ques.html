@@ -1,0 +1,105 @@
+<!--questions-->
+<!--write a html code to get user input and print student name age class-->
+<!--// write a js program that converts numeric value to a string and display along with it data type
+        // write a js program that accepts marks in 3 subjects as a string value convert them into integers and calculate the total and average marks
+        // write a javascript program that accepts a value from user converts it into a number and check whether tht result is none or a valid number
+        // write a javascript program that accepts temp in celsius as a string then convert it into a number and and convert it into farenheit
+-->
+        <!--write a JavaScript program to display name age and marks of a student using variables on browser or console-->
+
+
+<!--
+----------------------------FUNCTIONS----------------------
+            <script> 
+//square
+        function square(){
+            for(let i = 0;i<=10;i++){
+                console.log(i*i)
+            }
+        square()
+        }
+//sum
+        function sum(){
+            let num1 = prompt("Enter num1");
+            let num2 = prompt("Enter num2");
+            console.log(Number(num1) + Number(num2));
+        }
+        sum()
+//fullname
+        function printFullName(){
+        let firstName = prompt("Enter first name")
+        let lastName = prompt("Enter last name")
+        let space = ' '
+        let fullname = firstName + lastName
+        return fullname
+        } 
+    console.log(printFullName)       
+//function using parameter value
+        function areaOfCircle(r){
+
+        
+        let area = Math.PI*r*r
+        return area
+        }
+    conole.log(areaOfCircle(10))    
+//square of 2 numbers using passing 2 values
+        function squareNum(num1){
+        let sq = num1**2
+        return sq
+        }
+        console.log(squareNum(15))
+
+        
+
+//sum of 2 numbers using passing 2 values
+        function addNum(n1,n2){
+            let sum2 = Number(n1)+Number(n2)
+            return sum2
+        }
+        console.log(addNum(4,5))
+    </script>    -->
+
+<!--write program to print prime numbers, fibonacci series,type conversion, basic patterns-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+
+    <h1>Todo List</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Submit</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            let input = document.getElementById("taskInput");
+            let taskText = input.value.trim();
+
+            if (taskText === "") return;
+
+            let li = document.createElement("li");
+            li.textContent = taskText;
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.style.marginLeft = "10px";
+
+            deleteBtn.onclick = function() {
+                li.remove();
+            };
+
+            li.appendChild(deleteBtn);
+
+            document.getElementById("taskList").appendChild(li);
+
+            input.value = "";
+        }
+    </script>
+
+</body>
+</html>
