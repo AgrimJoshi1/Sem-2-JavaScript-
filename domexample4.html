@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+'<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,38 @@
             gap: 10px;
         }
     </style>
-    <form>
-        <input type="text" id="name" placeholder="Enter your name">
+    <form id="myForm">
+        <input type="text" id="name" placeholder="Enter your name"> 
         <input type="text" id="email" placeholder="Enter your email">
         <input type="password" id="password" placeholder="Enter your password">
         <input type="tel" id="contact" placeholder="Enter your contact number">
         <button type="submit">Submit</button>
+<script>
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+        let name=document.getElementById("name").value;
+        let email=document.getElementById("email").value;
+        let password=document.getElementById("password").value;
+        let contact=document.getElementById("contact").value;
+        if (name===""){
+            alert("Name cant be empty");
+            e.preventDefault();
+        }
+        if (!email.includes("@")){
+            alert("Enter valid email");
+            e.preventDefault();
+        }
+        let contactPattern=/^[0-9]{10}$/;
+        if (!contactPattern.test(contact)){
+            alert("Enter valid contact number");
+            e.preventDefault();
+        }
+        let passwordPattern=/^(?=.*[A-Z])(?=.*\d).{6,}$/;
+        if (!passwordPattern.test(password)){   
+            alert("Password must be at least 6 characters long and contain both letters and numbers");
+            e.preventDefault();
+        }
+    });
+</script>
     </form>
 </body>
 </html>
