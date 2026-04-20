@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const nav = window.navigator;
+
+        const browserName = nav.appName;
+
+        const browserVersion = nav.appVersion;
+
+        const userAgent = nav.userAgent;
+
+        const browserLanguage = nav.language || nav.userLanguage;
+
+        const os = nav.platform;
+
+        console.log(`browser version: ${browserVersion}`);
+        console.log(`user agent: ${userAgent}`);
+        console.log(`browser language: ${browserLanguage}`);
+        console.log(`operating system: ${os}`);
+        const currentURL = window.location.href;
+        console.log(`current URL: ${currentURL}`);
+
+        const protocol = window.location.protocol;
+        console.log(`protocol: ${protocol}`);
+
+        const pathname = window.location.pathname;
+        console.log(`pathname: ${pathname}`);
+
+        const search = window.location.search;
+        console.log(`search: ${search}`);
+
+        //window.location.reload();
+    </script>
+</body>
+</html>
