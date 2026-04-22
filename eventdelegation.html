@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(window.document.title);
+        window.alert("Hello World");
+        console.log(window.history.length);
+        console.log(window.location.href);
+        console.log(window.navigator.userAgent);
+        if(window.history){
+            console.log("history length: "+window.history.length);
+            window.history.back();
+            //window.history.forward();
+            //window.history.go(2);
+            //only use one at a time, otherwise it will cause unexpected behavior
+            console.log("current state: "+window.history.state);
+        }
+    </script>
+</body>
+</html>
