@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Function</title>
+</head>
+<body>
+    <script>
+        function power(num, pow) {
+            if (pow < 0) {
+                return -1;
+            }
+            return Math.pow(num,pow);  
+        }
+        let input = prompt();
+        let [num, pow] = input.split(" ").map(Number);
+
+        console.log(`${power(num, pow)}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function updateEmployee(employee) {
+    let increment = 0;
+    if (employee.performance === "Excellent") {
+        increment = 0.20;
+    } 
+    else if (employee.performance === "Good") {
+        increment = 0.10;
+    } 
+    else {
+        increment = 0.05;
+    }
+    employee.salary = employee.salary + (employee.salary * increment);
+    employee.status = "Active";
+    return employee;
+}
+
+const employee = {
+    name: "Riya",
+    department: "HR",
+    salary: 40000,
+    performance: "Excellent"
+};
+
+let updatedEmployee = updateEmployee(employee);
+
+console.log(updatedEmployee);
+    </script>
+</body>
+</html>
